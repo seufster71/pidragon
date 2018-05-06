@@ -4,3 +4,27 @@
 [submodule "pidragon/src/main/js/coreView"]
 	path = pidragon/src/main/js/coreView
 	url = ssh://cborghome.ddns.net/opt/gitcborg/toasthub-core-reactweb.git
+[submodule "pidragon/src/main/js/member/dashboard"]
+	path = pidragon/src/main/js/member/dashboard
+	url = ssh://cborghome.ddns.net/opt/gitcborg/toasthub-member-dashboard-react.git
+[submodule "pidragon/src/main/js/member/logout"]
+	path = pidragon/src/main/js/member/logout
+	url = ssh://cborghome.ddns.net/opt/gitcborg/toasthub-member-logout-react.git
+[submodule "pidragon/src/main/js/member/profile"]
+	path = pidragon/src/main/js/member/profile
+	url = ssh://cborghome.ddns.net/opt/gitcborg/toasthub-member-profile-react.git
+[submodule "pidragon/src/main/js/member/submenu"]
+	path = pidragon/src/main/js/member/submenu
+	url = ssh://cborghome.ddns.net/opt/gitcborg/toasthub-member-submenu-react.git
+[submodule "pidragon/src/main/js/memberView/dashboard"]
+	path = pidragon/src/main/js/memberView/dashboard
+	url = ssh://cborghome.ddns.net/opt/gitcborg/toasthub-member-dashboard-reactweb.git
+[submodule "pidragon/src/main/js/memberView/logout"]
+	path = pidragon/src/main/js/memberView/logout
+	url = ssh://cborghome.ddns.net/opt/gitcborg/toasthub-member-logout-reactweb.git
+[submodule "pidragon/src/main/js/memberView/profile"]
+	path = pidragon/src/main/js/memberView/profile
+	url = ssh://cborghome.ddns.net/opt/gitcborg/toasthub-member-profile-reactweb.git
+[submodule "pidragon/src/main/js/memberView/submenu"]
+	path = pidragon/src/main/js/memberView/submenu
+	url = ssh://cborghome.ddns.net/opt/gitcborg/toasthub-member-submenu-reactweb.git
