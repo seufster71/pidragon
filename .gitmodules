@@ -1,0 +1,6 @@
+[submodule "pidragon/src/main/js/core"]
+	path = pidragon/src/main/js/core
+	url = ssh://cborghome.ddns.net/opt/gitcborg/toasthub-core-react.git
+[submodule "pidragon/src/main/js/coreView"]
+	path = pidragon/src/main/js/coreView
+	url = ssh://cborghome.ddns.net/opt/gitcborg/toasthub-core-reactweb.git
