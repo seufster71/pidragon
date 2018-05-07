@@ -10,9 +10,7 @@ export default function configureStore() {
       headerName: "ToastHub",
       codeType : 'WEB',
       debugClient: true,
-      memberMenu:'MEMBER_MENU_TOP',
-      adminMenu:'ADMIN_MENU_TOP',
-      systemMenu:'SYSTEM_MENU_TOP'
+      memberMenu:'MEMBER_MENU_TOP'
     },
     session: { sessionActive: false },
     status: { error: null, info: null, warn: null }

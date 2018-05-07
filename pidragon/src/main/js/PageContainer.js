@@ -18,31 +18,17 @@ class PageContainer extends Component {
 
   render() {
     fuLogger.log({level:'TRACE',loc:'PageContainer::render',msg:"page "+ this.props.history.location.pathname});
-    if (this.props.session.sessionActive == true) {
-     return (
-      <Switch>
-        <Route exact path="/" component={MemberContainer}/>
-        <Route path="/member" component={MemberContainer}/>
-        <Route path="/access-denied" component={AccessDeniedContainer} />
-        <Route path="/member-servers" component={MemberContainer}/>
-        <Route path="/member-profile" component={MemberContainer}/>
-        <Route path="/member-logout" component={MemberContainer}/>
-      </Switch>
-
-      );
-    } else {
       return (
         <div>
         <NavigationView appPrefs={this.props.appPrefs} activeTab={this.props.history.location.pathname}
           menus={this.props.appMenus.PUBLIC_MENU_RIGHT} />
          <StatusView />
           <Switch>
-            <Route exact path="/" component={PublicContainer}/>
+            <Route exact path="/" component={LoginContainer}/>
             <Route path="/login" component={LoginContainer}/>
           </Switch>
         </div>
       );
-    }
   }
 }
 
