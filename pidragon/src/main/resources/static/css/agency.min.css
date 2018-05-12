@@ -135,9 +135,7 @@ a:active, a:focus, a:hover {
 }
 
 .navbar-custom .navbar-brand {
-	filter: drop-shadow(5px 5px 3px rgba(0,0,0,1.5));
-	color: #248003;
-/* 	color: #fed136; */
+	color: #fed136;
 	font-family: 'Wallpoet',
 	/* font-family: "Kaushan Script", "Helvetica Neue", Helvetica, Arial, */
 		cursive

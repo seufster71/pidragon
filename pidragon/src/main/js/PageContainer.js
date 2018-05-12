@@ -9,15 +9,36 @@ import MemberContainer from "./member/member-container";
 import PublicContainer from "./public/public-container";
 import AccessDeniedContainer from "./core/usermanagement/accessdenied-container";
 import { bindActionCreators } from "redux";
+import * as sessionActions from "./member/session/session-actions";
 import fuLogger from './core/common/fu-logger';
 
 class PageContainer extends Component {
   constructor(props) {
     super(props);
   }
+  componentDidMount() {
+    this.props.actions.sessionCheck().then(() => {
+      if (this.props.session.sessionActive == false && this.props.history.location.pathname != "/") {
+        this.props.history.push("/");
+      }
+    });
+  }
 
   render() {
     fuLogger.log({level:'TRACE',loc:'PageContainer::render',msg:"page "+ this.props.history.location.pathname});
+    if (this.props.session.sessionActive == true) {
+     return (
+      <Switch>
+        <Route exact path="/" component={MemberContainer}/>
+        <Route path="/member" component={MemberContainer}/>
+        <Route path="/access-denied" component={AccessDeniedContainer} />
+        <Route path="/member-servers" component={MemberContainer}/>
+        <Route path="/member-profile" component={MemberContainer}/>
+        <Route path="/member-logout" component={MemberContainer}/>
+      </Switch>
+
+      );
+    } else {
       return (
         <div>
         <NavigationView appPrefs={this.props.appPrefs} activeTab={this.props.history.location.pathname}
@@ -29,6 +50,7 @@ class PageContainer extends Component {
           </Switch>
         </div>
       );
+    }
   }
 }
 
@@ -50,5 +72,8 @@ function mapStateToProps(state, ownProps) {
     session:state.session
   };
 }
+function mapDispatchToProps(dispatch) {
+  return { actions:bindActionCreators(sessionActions,dispatch) };
+}
 
-export default withRouter(connect(mapStateToProps)(PageContainer));
+export default withRouter(connect(mapStateToProps,mapDispatchToProps)(PageContainer));

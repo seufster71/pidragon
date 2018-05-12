@@ -31,3 +31,9 @@
 [submodule "pidragon/src/main/js/member/session"]
 	path = pidragon/src/main/js/member/session
 	url = ssh://cborghome.ddns.net/opt/gitcborg/toasthub-member-session-react.git
+[submodule "pidragon/src/main/js/member/servers"]
+	path = pidragon/src/main/js/member/servers
+	url = ssh://cborghome.ddns.net/opt/gitdragon/pidragon-member-servers-react.git
+[submodule "pidragon/src/main/js/memberView/servers"]
+	path = pidragon/src/main/js/memberView/servers
+	url = ssh://cborghome.ddns.net/opt/gitdragon/pidragon-member-servers-reactweb.git

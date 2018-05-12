@@ -7,7 +7,7 @@ import reduxImmutableStateInvariant from "redux-immutable-state-invariant";
 export default function configureStore() {
   const initialState = {
     appPrefs: { lang: localStorage.getItem("lang"),
-      headerName: "ToastHub",
+      headerName: "PI Dragon",
       codeType : 'WEB',
       debugClient: true,
       memberMenu:'MEMBER_MENU_TOP'

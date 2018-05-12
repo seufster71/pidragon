@@ -55,7 +55,8 @@ class MemberContainer extends Component {
           <StatusView/>
           <Switch>
             <Route exact path="/" component={DashboardContainer} />
-            <Route exact path="/member" component={DashboardContainer} />
+            <PrivateRoute path="/member" component={DashboardContainer} permissions={myPermissions} code="MD" minRights="R" pathto="/access-denied"/>
+            <PrivateRoute path="/member-servers" component={ProfileContainer} permissions={myPermissions} code="MS" minRights="W" pathto="/access-denied"/>
             <PrivateRoute path="/member-profile" component={ProfileContainer} permissions={myPermissions} code="MP" minRights="W" pathto="/access-denied"/>
             <PrivateRoute path="/member-logout" component={LogoutContainer} permissions={myPermissions} code="ML" pathto="/access-denied"/>
             <Route path="/admin" render={() => (

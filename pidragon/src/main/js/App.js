@@ -16,7 +16,7 @@ if (process.env.NODE_ENV !== "production") {
 
 const store = configureStore();
 store.dispatch(initPublic());
-store.dispatch(sessionCheck());
+//store.dispatch(sessionCheck());
 
 window.onbeforeunload = () => {
   localStorage.setItem("lang", store.getState().appPrefs.lang);
