@@ -13,7 +13,8 @@ export default function configureStore() {
       memberMenu:'MEMBER_MENU_TOP'
     },
     session: { sessionActive: false },
-    status: { error: null, info: null, warn: null }
+    status: { error: null, info: null, warn: null },
+    servers: { towers: []}
   };
   return createStore(
     rootReducer,
