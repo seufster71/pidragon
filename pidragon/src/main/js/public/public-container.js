@@ -32,7 +32,6 @@ class PublicContainer extends Component {
 PublicContainer.propTypes = {
 	appPrefs: PropTypes.object,
 	lang: PropTypes.string,
-	appGlobal: PropTypes.object,
 	actions: PropTypes.object
 };
 
